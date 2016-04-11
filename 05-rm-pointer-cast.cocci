@@ -32,5 +32,8 @@ type T;
 expression x;
 @@
   free(
+  <+...
 - (T)
-  x)
+  x
+  ...+>
+  )
