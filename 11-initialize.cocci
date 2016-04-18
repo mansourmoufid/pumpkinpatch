@@ -13,10 +13,11 @@ identifier x != a.x;
   ;
 
 @@
+type T;
 identifier x;
 expression s;
 @@
-  size_t x =
+  T x =
 <+...
 - strlen(s)
 + (s == NULL ? 0 : strlen(s))
