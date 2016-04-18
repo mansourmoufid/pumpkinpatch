@@ -1,14 +1,16 @@
 @a@
 type T;
 identifier x;
+position p;
 @@
-  extern T x;
+  extern T x@p;
 
 @@
 type T;
-identifier x != a.x;
+identifier x;
+position p != a.p;
 @@
-  T *x
+  T *x@p
 + = NULL
   ;
 
