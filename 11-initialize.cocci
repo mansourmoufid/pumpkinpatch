@@ -3,7 +3,11 @@ type T;
 identifier x;
 position p;
 @@
+(
   extern T x@p;
+|
+  register T x@p;
+)
 
 @@
 type T;
