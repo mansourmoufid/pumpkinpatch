@@ -22,3 +22,8 @@ expression x;
 expression x;
 @@
 - #define EXIT_FAILURE x
+
+@@
+expression x;
+@@
+- #define SIZE_T_MAX x
