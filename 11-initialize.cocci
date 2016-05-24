@@ -29,3 +29,16 @@ expression s;
 + (s == NULL ? 0 : strlen(s))
 ...+>
   ;
+
+@@
+identifier x;
+@@
+  int x
++ = -1
+  ;
+  ...
+(
+  x = open(...)
+|
+  x = fileno(...)
+)
