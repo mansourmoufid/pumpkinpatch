@@ -37,3 +37,11 @@ expression x;
   x
   ...+>
   )
+
+@@
+type T;
+expression x, c, n;
+@@
+  memset(
+- (T)
+  x, c, n)
