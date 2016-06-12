@@ -42,3 +42,31 @@ identifier x;
 |
   x = fileno(...)
 )
+
+@b@
+type T;
+identifier x;
+expression n;
+position p;
+@@
+(
+  T x[n]@p = ...;
+|
+  const T x[n]@p;
+)
+
+@c@
+type T;
+identifier x;
+expression n;
+declaration D;
+position p != b.p;
+@@
+  T x[n]@p;@D
+
+@@
+declaration c.D;
+identifier c.x;
+@@
+  D
+++memset(x, 0, sizeof(x));
