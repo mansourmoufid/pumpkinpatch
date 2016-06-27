@@ -7,10 +7,10 @@ expression x;
 
 @@
 type T;
-expression x;
+expression x, y;
 @@
 - (T)
-  calloc(x)
+  calloc(x, y)
 
 @@
 type T;
