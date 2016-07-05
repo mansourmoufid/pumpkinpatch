@@ -6,11 +6,9 @@ expression x, n;
 
 @@
 type T;
-identifier x;
+T *x;
 expression n;
 @@
-  T *x;
-  ...
   x = calloc(n,
 - sizeof(...)
 + sizeof(T)
