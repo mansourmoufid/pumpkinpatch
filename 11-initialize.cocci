@@ -23,10 +23,14 @@ identifier x;
 expression s;
 @@
   x =
-<+...
+(
+  <+... s == NULL ...+>
+|
+  <+...
 - strlen(s)
 + (s == NULL ? 0 : strlen(s))
-...+>
+  ...+>
+)
 
 @@
 identifier x;
@@ -68,3 +72,4 @@ identifier c.x;
 @@
   D
 ++memset(x, 0, sizeof(x));
+  ... when != memset(x, 0, ...)
