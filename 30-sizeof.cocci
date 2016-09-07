@@ -15,3 +15,14 @@ T *x;
 @@
 - sizeof(*x)
 + sizeof(T)
+
+@@
+type T;
+identifier x;
+expression n;
+@@
+  T x[n];
+  <+...
+- sizeof(x) / sizeof(...)
++ sizeof(x) / sizeof(T)
+  ...+>
