@@ -12,3 +12,9 @@
 @@
 - SIZE_T_MAX
 + SIZE_MAX
+
+@@
+type T;
+@@
+- (T *) 0
++ NULL
