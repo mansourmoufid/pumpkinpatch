@@ -23,6 +23,9 @@ expression a, b;
   <+... x ...+>
 - , z
   ) {
-    ...
+    <...
++   z;
+    continue;
+    ...>
 +   z;
   }
