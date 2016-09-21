@@ -45,3 +45,9 @@ expression x, c, n;
   memset(
 - (T)
   x, c, n)
+
+@@
+type T;
+@@
+- (T)
+  NULL
