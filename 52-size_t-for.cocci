@@ -13,3 +13,16 @@ expression x;
     ...
   }
   ... when != i
+
+@@
+type T;
+identifier i;
+@@
+- T
++ size_t
+  i;
+  ... when != i
+  for (i = 0; i < ...; i++) {
+    ... when != i
+  }
+  ... when != i
