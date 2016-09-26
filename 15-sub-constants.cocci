@@ -15,6 +15,15 @@
 
 @@
 type T;
+identifier x;
+@@
+  sizeof(
+- ((T *)0)->x
++ (T){}.x
+  )
+
+@@
+type T;
 @@
 - (T *) 0
 + NULL
