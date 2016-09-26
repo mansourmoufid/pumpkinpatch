@@ -28,3 +28,14 @@ statement S;
 + x != NULL
   )
     S
+
+@@
+type T;
+identifier x;
+expression y, z;
+@@
+  T *x;
+  <+...
+- x ? y : z
++ x == NULL ? z : y
+  ...+>
