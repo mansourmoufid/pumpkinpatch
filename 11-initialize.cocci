@@ -28,16 +28,22 @@ expression s;
 
 @@
 identifier x;
+expression y, z;
 @@
   int x
 + = -1
   ;
-  ...
+  <+...
 (
   x = open(...)
 |
   x = fileno(...)
+|
+  read(x, y, z)
+|
+  write(x, y, z)
 )
+  ...+>
 
 @b@
 type T;
