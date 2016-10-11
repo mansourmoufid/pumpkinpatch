@@ -49,27 +49,23 @@ expression y, z;
 type T;
 identifier x;
 expression n;
-position p;
+declaration D;
 @@
 (
-  T x[n]@p = ...;
+  T x[n] = ...;
 |
-  const T x[n]@p;
+  const T x[n];
+|
+  T x[n];
+  ... when != x
+  memset(x, 0, sizeof(x));
+|
+  T x[n];@D
 )
 
-@c@
-type T;
-identifier x;
-expression n;
-declaration D;
-position p != b.p;
 @@
-  T x[n]@p;@D
-
-@@
-declaration c.D;
-identifier c.x;
+identifier b.x;
+declaration b.D;
 @@
   D
 ++memset(x, 0, sizeof(x));
-  ... when != memset(x, 0, ...)
