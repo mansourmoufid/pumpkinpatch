@@ -1,22 +1,16 @@
-@a@
+@@
 type T;
 identifier x;
-position p;
 @@
 (
-  extern T x@p;
+  extern T *x;
 |
-  register T x@p;
-)
-
-@@
-type T;
-identifier x;
-position p != a.p;
-@@
-  T *x@p
+  register T *x;
+|
+  T *x
 + = NULL
   ;
+)
 
 @@
 identifier x;
