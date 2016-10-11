@@ -69,3 +69,19 @@ declaration b.D;
 @@
   D
 ++memset(x, 0, sizeof(x));
+
+@@
+identifier s, x;
+expression n;
+@@
+(
+  struct s *x;
+|
+  struct s x[n];
+|
+  struct s x = ...;
+|
+  struct s x
++ = {0}
+  ;
+)
