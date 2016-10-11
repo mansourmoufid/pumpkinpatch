@@ -27,3 +27,11 @@ type T;
 @@
 - (T *) 0
 + NULL
+
+@@
+type T;
+T *x;
+@@
+  x =
+- 0
++ NULL
