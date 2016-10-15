@@ -56,10 +56,6 @@ declaration D;
 |
   const T x[n];
 |
-  T x[n];
-  ... when != x
-  memset(x, 0, sizeof(x));
-|
   T x[n];@D
 )
 
@@ -69,6 +65,7 @@ declaration b.D;
 @@
   D
 ++memset(x, 0, sizeof(x));
+  ... when != memset(x, 0, sizeof(x))
 
 @@
 identifier s, x;
