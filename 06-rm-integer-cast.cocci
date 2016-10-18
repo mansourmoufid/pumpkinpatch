@@ -30,6 +30,16 @@ expression n;
 
 @@
 type T;
+expression n;
+@@
+  calloc(
+  ...,
+- (T) (n)
++ n
+  )
+
+@@
+type T;
 expression x, n;
 @@
   realloc(x,
