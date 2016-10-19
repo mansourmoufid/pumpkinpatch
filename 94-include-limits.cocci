@@ -24,10 +24,5 @@
 
 @z depends on !a && (b)@
 @@
-  #include <...>
-+ #include <limits.h>
-
-@depends on !z && !a && (b)@
-@@
-  #include "..."
+  #include <stddef.h>
 + #include <limits.h>

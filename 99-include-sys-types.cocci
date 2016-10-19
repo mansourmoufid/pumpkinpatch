@@ -8,10 +8,5 @@
 
 @z depends on !a && (b)@
 @@
-  #include <...>
-+ #include <sys/types.h>
-
-@depends on !z && !a && (b)@
-@@
-  #include "..."
+  #include <stddef.h>
 + #include <sys/types.h>

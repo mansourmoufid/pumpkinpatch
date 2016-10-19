@@ -24,10 +24,5 @@
 
 @z depends on !a && (b || c)@
 @@
-  #include <...>
-+ #include <unistd.h>
-
-@depends on !z && !a && (b || c)@
-@@
-  #include "..."
+  #include <stddef.h>
 + #include <unistd.h>

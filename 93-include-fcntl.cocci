@@ -8,10 +8,5 @@
 
 @z depends on !a && (b)@
 @@
-  #include <...>
-+ #include <fcntl.h>
-
-@depends on !z && !a && (b)@
-@@
-  #include "..."
+  #include <stddef.h>
 + #include <fcntl.h>
