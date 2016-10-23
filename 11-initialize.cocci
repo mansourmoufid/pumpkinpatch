@@ -84,3 +84,12 @@ expression n;
 + = {0}
   ;
 )
+
+@@
+type T;
+T *x;
+identifier y, z;
+@@
+  ... when != y
+- x = y->z
++ x = y == NULL ? NULL : y->z
