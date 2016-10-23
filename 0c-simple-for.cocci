@@ -37,3 +37,15 @@ expression a, b;
   {
     ...
   }
+
+@@
+type T;
+T *x;
+@@
+  for (
+  ...;
+- x;
++ x != NULL;
+  ...) {
+    ...
+  }
