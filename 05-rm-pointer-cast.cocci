@@ -51,3 +51,11 @@ type T;
 @@
 - (T)
   NULL
+
+@@
+type T;
+T *x;
+void *y;
+@@
+- x = (T *)(y)
++ x = y
