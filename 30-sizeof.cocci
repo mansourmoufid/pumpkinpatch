@@ -26,3 +26,14 @@ expression n;
 - sizeof(x) / sizeof(...)
 + sizeof(x) / sizeof(T)
   ...+>
+
+@@
+type T;
+identifier x;
+expression n;
+@@
+  T x[n];
+  <+...
+- n * sizeof(T)
++ sizeof(x)
+  ...+>
