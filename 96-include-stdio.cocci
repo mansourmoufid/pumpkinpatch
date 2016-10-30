@@ -20,7 +20,19 @@
   stdout
 )
 
-@z depends on !a && (b)@
+@c@
+@@
+(
+  fprintf
+|
+  printf
+|
+  snprintf
+|
+  sprintf
+)
+
+@z depends on !a && (b || c)@
 @@
   #include <stddef.h>
 + #include <stdio.h>
