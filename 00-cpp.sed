@@ -3,7 +3,9 @@ s/^#[ 	]*undef/#undef/
 s/^#[ 	]*if/#if/
 s/^#[ 	]*else/#else/
 s/^#[ 	]*endif/#endif/
+s/^#[ 	]*include/#include/
+s/^#[ 	]*error/#error/
 
-/^#define.*\\$/N;s/\\\n//
-/^#define/s/	/ /g
-/^#define/s/  */ /g
+/^#.*\\$/N;s/\\\n//
+/^#/s/	/ /g
+/^#/s/  */ /g
