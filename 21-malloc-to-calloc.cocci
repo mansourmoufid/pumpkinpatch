@@ -17,3 +17,14 @@ expression n;
   x =
 - malloc(n)
 + calloc(n, 1)
+
+@@
+expression x, m, n;
+statement S;
+@@
+  x = calloc(m, n)
+  <...
+  if (x == NULL)
+    S
+  ...>
+- memset(x, 0, ...);
