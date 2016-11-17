@@ -1,10 +1,14 @@
 @@
 identifier x;
-expression n, y, z;
+expression n;
 @@
   char x[n];
   <+...
-  strncpy(x, y, z);
-- x[...] = 0;
-+ x[z - 1] = '\0';
+(
+- x[n] = '\0';
++ x[sizeof(x) - 1] = '\0';
+|
+- x[n - 1] = '\0';
++ x[sizeof(x) - 1] = '\0';
+)
   ...+>
