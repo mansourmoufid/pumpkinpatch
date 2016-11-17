@@ -42,3 +42,9 @@ expression n;
 @@
 - memset(x, '\0', n)
 + memset(x, 0, n)
+
+@@
+char x;
+@@
+- x = 0;
++ x = '\0';
