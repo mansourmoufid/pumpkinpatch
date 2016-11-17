@@ -59,3 +59,11 @@ void *y;
 @@
 - x = (T *)(y)
 + x = y
+
+@@
+type T;
+T *x;
+T *y;
+@@
+- x = (T *)(y)
++ x = y
