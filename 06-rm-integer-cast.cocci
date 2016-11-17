@@ -46,3 +46,11 @@ expression x, n;
 - (T) (n)
 + n
   )
+
+@@
+type T;
+T x;
+T y;
+@@
+- x = (T)(y)
++ x = y
