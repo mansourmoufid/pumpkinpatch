@@ -1,7 +1,6 @@
 @@
 expression x;
 @@
-  <+...
 (
   free(x);
   x = ...;
@@ -9,4 +8,3 @@ expression x;
   free(x);
 + x = NULL;
 )
-  ...+>

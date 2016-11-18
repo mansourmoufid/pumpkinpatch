@@ -4,7 +4,6 @@ identifier x;
 expression n;
 declaration D;
 @@
-  <+...
 (
   T x[n] = ...;
 |
@@ -16,7 +15,6 @@ declaration D;
 |
   T x[n];@D
 )
-  ...+>
 
 @@
 identifier a.x;

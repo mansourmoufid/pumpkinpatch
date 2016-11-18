@@ -3,7 +3,7 @@ identifier x;
 expression n, y;
 @@
   char x[n];
-  <+...
+  ...
 (
 - strncpy(x, y, n)
 + strncpy(x, y, sizeof(x))
@@ -11,4 +11,3 @@ expression n, y;
 - strncpy(x, y, n - 1)
 + strncpy(x, y, sizeof(x))
 )
-  ...+>

@@ -26,8 +26,7 @@ identifier x;
 expression y, z;
 @@
   T *x;
-  <+...
+  ...
 - x ? y : z
 + x == NULL ? z : y
-  ...+>
 

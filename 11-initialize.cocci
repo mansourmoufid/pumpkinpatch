@@ -1,20 +1,17 @@
 @@
 expression s;
 @@
-  <+...
 (
   (s == NULL ? 0 : strlen(s))
 |
 - strlen(s)
 + (s == NULL ? 0 : strlen(s))
 )
-  ...+>
 
 @@
 identifier x;
 expression y, z;
 @@
-  <+...
 (
   int x = ...;
 |
@@ -36,4 +33,3 @@ expression y, z;
 |
   write(x, y, z)
 )
-  ...+>

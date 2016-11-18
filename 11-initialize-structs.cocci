@@ -2,7 +2,6 @@
 identifier s, x;
 expression n;
 @@
-  <+...
 (
   struct s *x;
 |
@@ -16,4 +15,3 @@ expression n;
 + = {0}
   ;
 )
-  ...+>
