@@ -23,13 +23,13 @@
 @c@
 @@
 (
-  fprintf
+  fprintf(...)
 |
-  printf
+  printf(...)
 |
-  snprintf
+  snprintf(...)
 |
-  sprintf
+  sprintf(...)
 )
 
 @z depends on !a && (b || c)@

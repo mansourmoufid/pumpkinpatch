@@ -5,21 +5,21 @@
 @b@
 @@
 (
-  memcpy
+  memcpy(...)
 |
-  memset
+  memset(...)
 |
-  memmove
+  memmove(...)
 |
-  strcat
+  strcat(...)
 |
-  strcpy
+  strcpy(...)
 |
-  strncat
+  strncat(...)
 |
-  strncpy
+  strncpy(...)
 |
-  strlen
+  strlen(...)
 )
 
 @z depends on !a && (b)@

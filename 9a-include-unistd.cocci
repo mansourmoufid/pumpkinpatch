@@ -5,11 +5,11 @@
 @b@
 @@
 (
-  read
+  read(...)
 |
-  write
+  write(...)
 |
-  close
+  close(...)
 )
 
 @c@

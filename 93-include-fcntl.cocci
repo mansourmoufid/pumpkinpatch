@@ -4,7 +4,7 @@
 
 @b@
 @@
-  open
+  open(...)
 
 @z depends on !a && (b)@
 @@

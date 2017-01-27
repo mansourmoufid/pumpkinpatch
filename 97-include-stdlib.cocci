@@ -5,27 +5,27 @@
 @b@
 @@
 (
-  abort
+  abort(...)
 |
-  exit
+  exit(...)
 |
-  malloc
+  malloc(...)
 |
-  calloc
+  calloc(...)
 |
-  realloc
+  realloc(...)
 |
-  free
+  free(...)
 |
-  getenv
+  getenv(...)
 |
-  putenv
+  putenv(...)
 |
-  rand
+  rand(...)
 |
-  atoi
+  atoi(...)
 |
-  strtol
+  strtol(...)
 )
 
 @c@
