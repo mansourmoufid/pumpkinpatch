@@ -1,14 +1,15 @@
 @@
-expression x, y;
+expression x;
+type T;
 @@
-- malloc(x * sizeof(y))
-+ calloc(x, sizeof(y))
+- malloc(x * sizeof(T))
++ calloc(x, sizeof(T))
 
 @@
-expression x;
+type T;
 @@
-- malloc(sizeof(x))
-+ calloc(1, sizeof(x))
+- malloc(sizeof(T))
++ calloc(1, sizeof(T))
 
 @@
 char *x;

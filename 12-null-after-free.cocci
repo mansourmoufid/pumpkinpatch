@@ -1,5 +1,14 @@
 @@
+type T;
 expression x;
+@@
+- free((T *) (x))
++ free(x)
+
+@@
+type T;
+expression x;
+statement S;
 @@
 (
   free(x);
@@ -7,4 +16,14 @@ expression x;
 |
   free(x);
 + x = NULL;
+  ...
+  S
+|
+  free((T *) (x));
+  x = ...;
+|
+  free((T *) (x));
++ x = NULL;
+  ...
+  S
 )
