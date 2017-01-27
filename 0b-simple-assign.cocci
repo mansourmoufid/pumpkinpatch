@@ -1,6 +1,7 @@
 @@
 expression x, y;
 constant C;
+statement S;
 @@
   x =
   <+...
@@ -9,6 +10,8 @@ constant C;
   ...+>
   ;
 + y = C;
+  ...
+  S
 
 @@
 expression x, y;

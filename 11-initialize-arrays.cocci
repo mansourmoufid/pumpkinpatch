@@ -19,7 +19,15 @@ declaration D;
 @@
 identifier a.x;
 declaration a.D;
+statement S;
 @@
+(
+  D
+  ... when != x
+  memset(x, 0, ...);
+|
   D
 ++memset(x, 0, sizeof(x));
-  ... when != memset(x, 0, sizeof(x))
+  ...
+  S
+)
