@@ -1,5 +1,5 @@
 @@
-expression x, y, z;
+expression x, z;
 expression a, b;
 @@
 + z;
@@ -14,7 +14,7 @@ expression a, b;
   }
 
 @@
-expression x, y, z;
+expression x, z;
 expression a, b;
 @@
   for (
