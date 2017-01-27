@@ -1,12 +1,10 @@
 @@
-expression s;
+expression x;
+char *s;
 @@
-(
-  (s == NULL ? 0 : strlen(s))
-|
+  x =
 - strlen(s)
 + (s == NULL ? 0 : strlen(s))
-)
 
 @@
 identifier x;
