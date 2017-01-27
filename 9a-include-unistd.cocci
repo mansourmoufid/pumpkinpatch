@@ -10,6 +10,8 @@
   write(...)
 |
   close(...)
+|
+  gethostname(...)
 )
 
 @c@
