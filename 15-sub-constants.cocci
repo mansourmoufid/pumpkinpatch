@@ -15,28 +15,6 @@
 
 @@
 type T;
-identifier x;
-@@
-  sizeof(
-- ((T *)0)->x
-+ (T){}.x
-  )
-
-@@
-type T;
-expression x;
-@@
-- (T *) x - (T *) 0
-+ (size_t) x
-
-@@
-type T;
-@@
-- (T *) 0
-+ NULL
-
-@@
-type T;
 T *x;
 @@
   x =
