@@ -3,6 +3,7 @@
   #include <stdio.h>
 
 @b@
+symbol stderr, stdin, stdout;
 @@
 (
   FILE

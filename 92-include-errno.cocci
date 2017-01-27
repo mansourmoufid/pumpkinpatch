@@ -3,10 +3,12 @@
   #include <errno.h>
 
 @b@
+symbol errno;
 @@
   errno
 
 @c@
+symbol EBADF, EINVAL, ENOMEM;
 @@
 (
   EBADF
