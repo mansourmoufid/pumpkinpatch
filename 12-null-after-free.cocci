@@ -1,4 +1,11 @@
 @@
+expression x;
+@@
+- free(*x++);
++ free(*x);
++ *x++;
+
+@@
 type T;
 expression x;
 @@
