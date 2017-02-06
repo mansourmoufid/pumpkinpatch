@@ -15,6 +15,7 @@
 )
 
 @c@
+symbol environ;
 @@
 (
   STDIN_FILENO
@@ -22,6 +23,8 @@
   STDOUT_FILENO
 |
   STDERR_FILENO
+|
+  environ
 )
 
 @z depends on !a && (b || c)@
