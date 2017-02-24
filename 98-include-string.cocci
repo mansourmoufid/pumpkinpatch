@@ -20,6 +20,8 @@
   strncpy(...)
 |
   strlen(...)
+|
+  strerror(...)
 )
 
 @z depends on !a && (b)@
