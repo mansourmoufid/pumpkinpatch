@@ -2,7 +2,7 @@
 type T;
 identifier x;
 expression n;
-declaration D;
+statement S;
 @@
 (
   T x[n] = ...;
@@ -13,20 +13,11 @@ declaration D;
 |
   static T x[n];
 |
-  T x[n];@D
-)
-
-@@
-identifier a.x;
-declaration a.D;
-statement S;
-@@
-(
-  D
+  T x[n];
   ... when != x
   memset(x, 0, ...);
 |
-  D
+  T x[n];
 ++memset(x, 0, sizeof(x));
   ...
   S
