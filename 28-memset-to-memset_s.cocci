@@ -4,7 +4,7 @@ identifier x;
 expression n;
 @@
   T x[n];
-  ...
+  ... when != memset_s(x, ...)
 + #if defined(__STDC_LIB_EXT1__)
 + memset_s(x, sizeof(x), 0, sizeof(x));
 + #else
