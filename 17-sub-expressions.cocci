@@ -3,14 +3,23 @@ type T;
 identifier x;
 @@
   sizeof(
-(
-- &((T *) 0)->x
-+ ((T) {}).x
-|
 - ((T *) 0)->x
 + ((T) {}).x
-)
   )
+
+@@
+type T;
+identifier f;
+@@
+- &((T *)0)->f
++ offsetof(T, f)
+
+@@
+type T1, T2;
+identifier f;
+@@
+- (T2) (offsetof(T1, f))
++ offsetof(T1, f)
 
 @@
 type T1, T2;
