@@ -14,3 +14,16 @@ statement S;
   ...
   S
 )
+
+@@
+type T;
+T *x;
+identifier y, z;
+@@
+  ... when != y
+(
+  y = y->z
+|
+- x = y->z
++ x = y == NULL ? NULL : y->z
+)
