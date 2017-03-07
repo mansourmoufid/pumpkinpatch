@@ -4,8 +4,13 @@
 
 @b@
 symbol errno;
+symbol program_invocation_name;
 @@
+(
   errno
+|
+  program_invocation_name
+)
 
 @c@
 symbol EBADF, EINVAL, ENOMEM;
