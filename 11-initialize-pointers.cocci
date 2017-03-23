@@ -17,13 +17,11 @@ statement S;
 
 @@
 type T;
-T *x;
-identifier y, z;
+identifier x, y, z;
+statement S;
 @@
-  ... when != y
-(
-  y = y->z
-|
-- x = y->z
-+ x = y == NULL ? NULL : y->z
-)
+  ... when != S
+  T *x =
+- y->z
++ y == NULL ? NULL : y->z
+  ;
