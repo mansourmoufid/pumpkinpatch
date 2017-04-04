@@ -20,12 +20,22 @@ expression n;
 + calloc(n, 1)
 
 @@
-expression x, m, n;
+expression x, n;
 statement S;
 @@
-  x = calloc(m, n)
+  x = calloc(n, ...)
   <...
   if (x == NULL)
     S
   ...>
 - memset(x, 0, ...);
+
+@@
+expression x, n;
+@@
+  x = calloc(n, ...)
+  ... when != x
+  if (x != NULL) {
+-   memset(x, 0, ...);
+    ...
+  }
