@@ -2,9 +2,8 @@
 type T;
 identifier n;
 @@
-- T
-+ ssize_t
-  n;
+- T n;
++ ssize_t n;
   ...
   n = read(...)
 
@@ -12,8 +11,7 @@ identifier n;
 type T;
 identifier n;
 @@
-- T
-+ ssize_t
-  n;
+- T n;
++ ssize_t n;
   ...
   n = write(...)

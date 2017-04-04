@@ -2,9 +2,8 @@
 type T;
 identifier n;
 @@
-- T
-+ size_t
-  n;
+- T n;
++ size_t n;
   ...
   n = fread(...)
 
@@ -12,8 +11,7 @@ identifier n;
 type T;
 identifier n;
 @@
-- T
-+ size_t
-  n;
+- T n;
++ size_t n;
   ...
   n = fwrite(...)
