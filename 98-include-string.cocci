@@ -19,6 +19,10 @@
 |
   strncpy(...)
 |
+  strlcat(...)
+|
+  strlcpy(...)
+|
   strlen(...)
 |
   strerror(...)

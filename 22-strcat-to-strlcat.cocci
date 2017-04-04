@@ -4,5 +4,5 @@ expression n, y;
 @@
   char x[n];
   ...
-- strcpy(x, y);
-+ strncpy(x, y, sizeof(x));
+- strcat(x, y)
++ strlcat(x, y, sizeof(x))
