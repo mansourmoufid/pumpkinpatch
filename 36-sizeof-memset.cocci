@@ -1,9 +1,9 @@
 @@
 type T;
 identifier x;
-constant C;
+constant n;
 @@
-  T x[C];
+  T x[n];
   ...
-- memset(x, 0, C)
+- memset(x, 0, n)
 + memset(x, 0, sizeof(x))
