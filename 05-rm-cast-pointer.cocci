@@ -16,6 +16,13 @@ type T;
 @@
 type T;
 T *x;
+@@
+- (T *) (x)
++ x
+
+@@
+type T;
+T *x;
 void *y;
 @@
   x =
@@ -23,10 +30,18 @@ void *y;
 + y
 
 @@
+void *x;
 type T;
-T *x;
 T *y;
 @@
-  x =
-- (T *)(y)
-+ y
+- x = (void *) (y)
++ x = y
+
+@@
+type T;
+T *x;
+identifier f;
+void *y;
+@@
+- x = (T *) f(...)@y
++ x = y
