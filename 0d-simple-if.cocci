@@ -1,16 +1,12 @@
 @@
-type T;
-T *x;
-identifier f =~ "alloc";
-expression E;
-constant C;
+expression a, b;
+constant c;
+binary operator x = {==, !=, <};
 statement S;
 @@
-+ x = E;
++ a = b;
   if (
-  <+...
-- (x = f(...)@E) == C
-+ x == C
-  ...+>
+- (a = b) x c
++ a x c
   )
     S

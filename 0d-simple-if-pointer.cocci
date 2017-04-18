@@ -23,6 +23,30 @@ statement S;
 @@
 type T;
 T *x;
+identifier f;
+statement S;
+@@
+  if (
+- !f(...)@x
++ x == NULL
+  )
+    S
+
+@@
+type T;
+T *x;
+identifier f;
+statement S;
+@@
+  if (
+- f(...)@x
++ x != NULL
+  )
+    S
+
+@@
+type T;
+T *x;
 expression y, z;
 @@
 - x ? y : z

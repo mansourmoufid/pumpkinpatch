@@ -2,8 +2,6 @@
 identifier x;
 statement S;
 @@
-  int x;
-  ...
   if (
 - x
 + x != 0
@@ -14,11 +12,31 @@ statement S;
 identifier x;
 statement S;
 @@
-  int x;
-  ...
   if (
 - !x
 + x == 0
+  )
+    S
+
+@@
+int x;
+identifier f;
+statement S;
+@@
+  if (
+- !f(...)@x
++ x == 0
+  )
+    S
+
+@@
+int x;
+identifier f;
+statement S;
+@@
+  if (
+- f(...)@x
++ x != 0
   )
     S
 
