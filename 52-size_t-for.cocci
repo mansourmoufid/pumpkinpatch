@@ -1,13 +1,25 @@
 @@
 type T;
 identifier i;
+size_t n;
+@@
+- T i;
++ size_t i;
+  ... when != i
+  for (i = 0; i < n; i++) {
+    ...
+  }
+  ... when != i
+
+@@
+type T;
+identifier i;
 expression x;
 @@
-- T
-+ size_t
-  i;
+- T i;
++ size_t i;
   ... when != i
-  for (i = 0; i < ...; i++) {
+  for (i = 0; ...; i++) {
     ...
     x[i]
     ...
@@ -18,11 +30,10 @@ expression x;
 type T;
 identifier i;
 @@
-- T
-+ size_t
-  i;
+- T i;
++ size_t i;
   ... when != i
-  for (i = 0; i < ...; i++) {
+  for (i = 0; ...; i++) {
     ... when != i
   }
   ... when != i
