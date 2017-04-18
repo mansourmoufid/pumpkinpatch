@@ -5,6 +5,8 @@
 @b@
 @@
 (
+  CHAR_BIT
+|
   INT_MIN
 |
   INT_MAX
