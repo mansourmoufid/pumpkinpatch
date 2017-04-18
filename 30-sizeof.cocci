@@ -10,13 +10,6 @@ expression n;
 
 @@
 type T;
-T *x;
-@@
-- sizeof(*x)
-+ sizeof(T)
-
-@@
-type T;
 identifier x;
 expression n;
 @@

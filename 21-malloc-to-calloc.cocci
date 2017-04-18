@@ -1,4 +1,11 @@
 @@
+type T;
+T *x;
+@@
+- sizeof(*x)
++ sizeof(T)
+
+@@
 expression x;
 type T;
 @@
