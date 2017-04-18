@@ -12,6 +12,14 @@ type T;
 
 @@
 type T;
+identifier f;
+size_t x;
+@@
+- (T) f(...)@x
++ x
+
+@@
+type T;
 expression n;
 @@
   malloc(
