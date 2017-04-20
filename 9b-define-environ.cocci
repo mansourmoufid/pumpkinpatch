@@ -1,15 +1,5 @@
-@@
-type T;
-symbol environ;
-@@
-(
-  #include <unistd.h>
-  extern char **environ;
-|
-- T environ;
-)
-
 @a@
+symbol environ;
 @@
   extern char **environ;
 
