@@ -9,7 +9,7 @@ T *x;
 expression x;
 type T;
 @@
-- malloc(x * sizeof(T))
+- malloc((x) * sizeof(T))
 + calloc(x, sizeof(T))
 
 @@
