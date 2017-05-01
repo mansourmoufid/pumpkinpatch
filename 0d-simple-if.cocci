@@ -1,5 +1,6 @@
 @@
-expression a, b;
+identifier a;
+expression b;
 constant c;
 binary operator x = {==, !=, <};
 statement S;
