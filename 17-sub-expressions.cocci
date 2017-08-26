@@ -48,3 +48,16 @@ type T;
 @@
 - (T *) 0
 + NULL
+
+@@
+type T;
+identifier x;
+expression n, y, z;
+identifier f = {memset, memcpy, memmove};
+@@
+  T x[n];
+  ... when any
+  f(
+- x
++ &x
+  , y, z);

@@ -15,10 +15,10 @@ statement S;
 |
   T x[n];
   ... when != x
-  memset(x, 0, ...);
+  memset(&x, 0, ...);
 |
   T x[n];
-++memset(x, 0, sizeof(x));
+++memset(&x, 0, sizeof(x));
   ...
   S
 )
