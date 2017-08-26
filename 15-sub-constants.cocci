@@ -22,8 +22,7 @@ T *x;
 + NULL
 
 @@
-char *x;
-expression n;
+expression x, n;
 @@
 - memset(x, '\0', n)
 + memset(x, 0, n)
