@@ -2,13 +2,6 @@
 identifier n;
 size_t x;
 @@
-- const int n = (int) (x);
-+ const size_t n = x;
-
-@@
-identifier n;
-size_t x;
-@@
 - const int n = x;
 + const size_t n = x;
 
