@@ -1,7 +1,27 @@
 @@
+type T;
 identifier x;
 expression n, y;
-identifier f =~ "memcpy|strncpy|strlcpy";
+identifier f = {memset, memcpy, memmove};
+@@
+  T x[n];
+  ...
+  f(x, y,
+  <+...
+(
+- n * sizeof(T)
++ sizeof(x)
+|
+- n
++ sizeof(x)
+)
+  ...+>
+  );
+
+@@
+identifier x;
+expression n, y;
+identifier f = {strncpy, strncat, strlcpy, strlcat};
 @@
   char x[n];
   ...
@@ -18,23 +38,23 @@ identifier f =~ "memcpy|strncpy|strlcpy";
 @@
 identifier x;
 expression n, y;
-identifier f =~ "memcpy|strncpy|strlcpy";
+identifier f = {strncpy, strncat, strlcpy, strlcat};
 @@
   char x[n + 1];
   ...
   f(x, y,
 (
-- n
+- n + 1
 + sizeof(x)
 |
-- n + 1
+- n
 + sizeof(x)
 )
   );
 
 @@
 identifier x;
-expression n, y;
+expression n;
 @@
   char x[n];
   ...
@@ -46,11 +66,11 @@ expression n, y;
 - n
 + sizeof(x) - 1
 )
-  ] = y
+  ]
 
 @@
 identifier x;
-expression n, y;
+expression n;
 @@
   char x[n + 1];
   ...
@@ -62,4 +82,4 @@ expression n, y;
 - n + 1
 + sizeof(x) - 1
 )
-  ] = y
+  ]
