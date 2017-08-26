@@ -4,7 +4,8 @@ char *s;
 @@
   x =
 - strlen(s)
-+ (s == NULL ? 0 : strlen(s))
++ s == NULL ? 0 : strlen(s)
+  ;
 
 @@
 identifier x;
