@@ -27,3 +27,19 @@ expression n;
   ...
 - n * sizeof(T)
 + sizeof(x)
+
+@@
+identifier x;
+constant n;
+identifier f = {read, write};
+@@
+(
+  char x[n];
+|
+  unsigned char x[n];
+)
+  ...
+  f(..., x,
+- n
++ sizeof(x)
+  )
