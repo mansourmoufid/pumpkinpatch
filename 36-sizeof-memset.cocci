@@ -5,5 +5,18 @@ constant n;
 @@
   T x[n];
   ...
-- memset(x, 0, n)
-+ memset(x, 0, sizeof(x))
+  memset(
+(
+  x
+|
+  &x
+)
+  , 0,
+(
+- n * sizeof(T)
++ sizeof(x)
+|
+- n
++ sizeof(x)
+)
+  )
