@@ -17,8 +17,13 @@ type T;
 type T;
 T *x;
 @@
+(
+- (T *const) (x)
++ x
+|
 - (T *) (x)
 + x
+)
 
 @@
 type T;
