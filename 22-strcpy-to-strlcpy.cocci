@@ -8,19 +8,18 @@ expression n, y;
 + strlcpy(x, y, sizeof(x));
 
 @@
-identifier x;
-expression n, y;
+expression x, y;
 @@
-  char x[n];
-  ...
+(
+- strncpy(x, y, sizeof(x) - 1);
++ strlcpy(x, y, sizeof(x));
+|
 - strncpy(x, y, sizeof(x));
 + strlcpy(x, y, sizeof(x));
+)
 
 @@
-identifier x;
-expression n, y, z;
+expression x, y, z;
 @@
-  char x[n];
-  ...
   strlcpy(x, y, z);
-- x[z - 1] = '\0';
+- x[z - 1] = 0;
