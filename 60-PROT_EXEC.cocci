@@ -7,7 +7,6 @@ symbol PROT_EXEC;
 
 @@
 expression x;
-symbol PROT_WRITE;
+symbol PROT_EXEC;
 @@
-- x | PROT_WRITE
-+ x | PROT_WRITE & ~PROT_EXEC
+- x |= PROT_EXEC;
