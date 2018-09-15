@@ -43,3 +43,20 @@ identifier f = {read, write};
 - n
 + sizeof(x)
   )
+
+@@
+expression x;
+@@
+(
+- (x) * sizeof(char)
++ x
+|
+- (x) / sizeof(char)
++ x
+|
+- (x) * sizeof(unsigned char)
++ x
+|
+- (x) / sizeof(unsigned char)
++ x
+)
