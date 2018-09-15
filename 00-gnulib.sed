@@ -1,10 +1,10 @@
-s/^_GL_INLINE_HEADER_BEGIN//
-s/^_GL_INLINE_HEADER_END//
+/^_GL_INLINE_HEADER_BEGIN/d
+/^_GL_INLINE_HEADER_END/d
 s/^#ifndef _GL_INLINE_HEADER_BEGIN.*/#if 0/
 
-s/^#define _GL_INLINE.*//
-s/^#define _GL_EXTERN_INLINE.*//
-s/^#define DLL_VARIABLE.*//
+/^#define _GL_INLINE/d
+/^#define _GL_EXTERN_INLINE/d
+/^#define DLL_VARIABLE/d
 
 s/_GL_INLINE/static inline/
 s/_GL_EXTERN_INLINE/inline/

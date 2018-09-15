@@ -1,4 +1,4 @@
-s/^#define CHAR_BIT .*//
-s/^#define NULL .*//
-s/^#define SIZE_MAX .*//
-s/^#define SSIZE_MAX .*//
+/^#define CHAR_BIT /d
+/^#define NULL /d
+/^#define SIZE_MAX /d
+/^#define SSIZE_MAX /d
