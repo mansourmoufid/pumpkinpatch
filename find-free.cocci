@@ -6,12 +6,12 @@ if not sys.stdin.isatty():
     for line in sys.stdin:
         f = line.rstrip('\n')
         functions.add(f)
-        print f
+        sys.stdout.write('{}\n'.format(f))
 def append(F, f):
     if f in functions:
         if not F in functions:
             functions.add(F)
-            print F
+            sys.stdout.write('{}\n'.format(F))
 
 @xx@
 type T;
